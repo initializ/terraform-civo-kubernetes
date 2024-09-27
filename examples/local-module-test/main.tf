@@ -1,6 +1,5 @@
 module "civo_kubernetes" {
-    source  = "initializ/kubernetes/civo"
-    version = "0.1.1"
+    source  = "../../"
 
     region              = var.region
     cluster_name        = var.cluster_name

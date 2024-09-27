@@ -102,4 +102,3 @@ variable "applications" {
   type        = string
   default     = "-traefik2-nodeport, metrics-server"
 }
-

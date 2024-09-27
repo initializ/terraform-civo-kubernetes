@@ -1,9 +1,15 @@
-resource "civo_kubernetes_node_pool" "this" {
-  count = length(var.node_pools)
+# node_pools.tf
 
-  cluster_id = civo_kubernetes_cluster.this.id
-  region     = var.node_pools[count.index].region
-  label      = var.node_pools[count.index].label
-  node_count = var.node_pools[count.index].node_count
-  size       = var.node_pools[count.index].size
+module "civo_node_pools" {
+  source = "./modules/civo_node_pool"
+
+  for_each = { for idx, pool in var.node_pools : pool.label != "" ? pool.label : "node_pool_${idx}" => pool }
+
+  label               = each.value.label
+  node_count          = each.value.node_count
+  size                = each.value.size
+  labels              = each.value.labels
+  taint               = each.value.taint
+  kubernetes_cluster_id = civo_kubernetes_cluster.this.id
 }
+

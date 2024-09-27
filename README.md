@@ -15,13 +15,13 @@ You can find a fully functional, production-ready example on the `examples/` fol
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_civo"></a> [civo](#requirement\_civo) | >= 1.0.39 |
+| <a name="requirement_civo"></a> [civo](#requirement\_civo) | >= 1.1.2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_civo"></a> [civo](#provider\_civo) | >= 1.0.39 |
+| <a name="provider_civo"></a> [civo](#provider\_civo) | >= 1.1.2 |
 
 
 ## Resources

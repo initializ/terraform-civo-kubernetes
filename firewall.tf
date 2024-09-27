@@ -1,7 +1,7 @@
 resource "civo_firewall" "this" {
   name                 = var.cluster_name
   region               = var.region
-  network_id           = civo_network.this.id
+  network_id           = local.network_id
   create_default_rules = false
 
   ingress_rule {
