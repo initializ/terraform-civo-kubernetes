@@ -17,11 +17,11 @@ terraform init -backend-config="bucket=<replace with CIVO Object Store Name>" -b
 ### Terrafrom Plan
 
 ```
-terraform plan -var="civo_token=<replace with CIVO API Token>"
+terraform plan
 ```
 
 ### Terrafrom Apply
 
 ```
-terraform apply -var="civo_token=<replace with CIVO API Token>"
+terraform apply
 ```
